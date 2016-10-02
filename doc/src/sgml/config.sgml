@@ -6670,9 +6670,9 @@ linkend="guc-log-timezone">で指定された時間帯で計算が行われま�
          statements exceeding the threshold.  This behavior can be useful for
          gathering statistics in high-load installations.
         -->
-        このオプションと<xref linkend="guc-log-min-duration-statement">を0に設定する方法との違いは、<varname>log_min_duration_statement</>を超えた場合、テキスト版の問い合わせが強制的に出力されるのに対して、このオプションでは出力されないという点です。
-したがって、<varname>log_duration</>が<literal>on</>、かつ、<varname>log_min_duration_statement</>が正の値を持つ場合、すべての経過時間がログに記録されますが、閾値を超えた文のみがテキスト版の問い合わせが含められるようになります。
-この動作は、高負荷なインストレーションで統計情報を収集する際に有用です。
+        このオプションと<xref linkend="guc-log-min-duration-statement">を0に設定する方法との違いは、<varname>log_min_duration_statement</>を超えた場合、クエリの文字列が出力されるのに対して、このオプションでは出力されないという点です。
+したがって、<varname>log_duration</>が<literal>on</>、かつ、<varname>log_min_duration_statement</>が正の値を持つ場合、すべての経過時間がログに記録されますが、閾値を超えたクエリのみ文字列が含まれるようになります。
+この動作は、高負荷な環境で統計情報を収集する際に有用です。
         </para>
        </note>
       </listitem>
